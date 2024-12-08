@@ -1,0 +1,18 @@
+{
+  "users": [
+    {
+      "id": "2",
+      "name": "Jane Smith",
+      "email": "jane.smith@example.com",
+      "role": "Admin",
+      "status": true
+    },
+    {
+      "id": "5f90",
+      "name": "Aman Singh",
+      "email": "amansingh79620@gmail.com",
+      "role": "Manager",
+      "status": false
+    }
+  ]
+}
