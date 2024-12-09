@@ -24,8 +24,6 @@ const AddRoleForm = ({ toggleAddRoleForm }) => {
     return role ? role.usersAssigned : 0; // Return the number of users assigned to this role (default 0 if not found)
   };
 
-  const [usersAssigned, setUsersAssigned] = useState(calculateUsersAssigned());
-
   // Handle permission change
   const handlePermissionChange = (e) => {
     const { name, checked } = e.target;
@@ -50,7 +48,7 @@ const AddRoleForm = ({ toggleAddRoleForm }) => {
       setError(""); // Clear error if permissions are selected
     }
     // Update usersAssigned based on the existing roles
-    const updatedUsersAssigned = calculateUsersAssigned() + 1;
+    const updatedUsersAssigned = calculateUsersAssigned();
 
     const newRole = {
       roleName,
@@ -82,7 +80,6 @@ const AddRoleForm = ({ toggleAddRoleForm }) => {
           Delete: false,
           Update: false,
         });
-        setUsersAssigned(0); // Reset users assigned
       } else {
         throw new Error("Failed to add role");
       }

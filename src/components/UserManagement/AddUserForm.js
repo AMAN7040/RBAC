@@ -40,7 +40,7 @@ const AddUserForm = ({ toggleAddUserForm }) => {
       if (response.ok) {
         const data = await response.json();
         dispatch(addUser(data)); // Add the user to the store
-        toast.success("User Added Successfully",800);
+        toast.success("User Added Successfully", 800);
 
         // Find the role and update the usersAssigned count
         const currentRole = roles.find((r) => r.roleName === role);
@@ -95,7 +95,7 @@ const AddUserForm = ({ toggleAddUserForm }) => {
         throw new Error("Failed to add user");
       }
     } catch (error) {
-      toast.error('Failed to add User',1000);
+      toast.error("Failed to add User", 1000);
     }
   };
 
@@ -172,9 +172,12 @@ const AddUserForm = ({ toggleAddUserForm }) => {
                 required
                 className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
               >
-                <option value="Admin">Admin</option>
-                <option value="Manager">Manager</option>
-                <option value="Client">Client</option>
+                {/* Map through roles and display them correctly */}
+                {roles.map((role) => (
+                  <option key={role.roleName} value={role.roleName}>
+                    {role.roleName}
+                  </option>
+                ))}
               </select>
             </div>
 
