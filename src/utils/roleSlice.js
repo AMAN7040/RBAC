@@ -3,23 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const roleSlice = createSlice({
   name: "roles",
   initialState: {
-    roleInfo: [
-      {
-        roleName: "Admin",
-        usersAssigned: 0,
-        permissions: ["Create", "Read", "Update", "Delete"], // Admin has all permissions
-      },
-      {
-        roleName: "Manager",
-        usersAssigned: 0,
-        permissions: ["Read", "Update"], // Manager can read and update
-      },
-      {
-        roleName: "User",
-        usersAssigned: 0,
-        permissions: ["Read"], // User can only read
-      },
-    ],
+    roleInfo: [],
   },
 
   reducers: {
