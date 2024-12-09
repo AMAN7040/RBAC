@@ -29,10 +29,12 @@ const Profile = () => {
       {/* Profile Icon Button */}
       <button
         onClick={toggleDropdown}
-        className="w-12 h-12 p-3 rounded-full bg-gradient-to-r from-blue-500 to-indigo-600 text-white shadow-lg profile-icon flex items-center justify-center focus:outline-none"
+        className="w-12 h-12 p-3 rounded-full bg-gradient-to-r from-blue-200 to-indigo-300 text-white shadow-lg profile-icon flex items-center justify-center focus:outline-none"
         aria-label="Profile"
       >
-        <span className="text-lg font-semibold">P</span>
+        <span className="text-lg font-semibold">
+          👤
+        </span>
       </button>
 
       {/* Profile Dropdown Menu */}
@@ -48,7 +50,7 @@ const Profile = () => {
         >
           <div className="p-4">
             <h3 className="font-semibold text-gray-800">User Profile</h3>
-            <p className="text-gray-600">Manage your settings here.</p>
+            <p className="text-gray-600">Your Description</p>
           </div>
           <hr />
           <div className="p-4">
