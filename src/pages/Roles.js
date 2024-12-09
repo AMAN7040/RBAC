@@ -7,7 +7,7 @@ import useFetchAllRoles from "../hooks/RoleManagement/useFetchAlRoles";
 import { useSelector } from "react-redux";
 
 const Roles = () => {
-  const { loading, error } = useFetchAllRoles();
+  const { roleLoading, roleError } = useFetchAllRoles();
   const [showAddRoleForm, setShowAddRoleForm] = useState(false);
   const [showEditRoleForm, setShowEditRoleForm] = useState(false); // State for Edit form
   const [roleToEdit, setRoleToEdit] = useState(null); // State to store the role to edit
@@ -21,8 +21,8 @@ const Roles = () => {
     setShowEditRoleForm(!showEditRoleForm);
   };
 
-  if (loading) return <div>Loading...</div>;
-  if (error) return <div>Error fetching roles: {error}</div>;
+  if (roleLoading) return <div>Loading...</div>;
+  if (roleError) return <div>Error fetching roles: {roleError}</div>;
 
   if (!roles || !Array.isArray(roles)) {
     return <div>No roles available</div>;

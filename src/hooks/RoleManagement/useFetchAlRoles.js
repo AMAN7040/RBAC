@@ -4,20 +4,20 @@ import { allRoles } from "../../utils/roleSlice";
 
 const useFetchAllRoles = () => {
     const dispatch = useDispatch();
-    const [loading, setLoading] = useState(false);
-    const [error, setError] = useState(null);
+    const [roleLoading, setRoleLoading] = useState(false);
+    const [roleError, setRoleError] = useState(null);
   
     const getAllRoles = async () => {
-      setLoading(true);
+      setRoleLoading(true);
       try {
         const response = await fetch("http://localhost:5001/roles");
         if (!response.ok) throw new Error('Failed to fetch roles');
         const data = await response.json();
         dispatch(allRoles(data));
       } catch (err) {
-        setError(err.message);
+        setRoleError(err.message);
       } finally {
-        setLoading(false);
+        setRoleLoading(false);
       }
     };
   
@@ -25,7 +25,7 @@ const useFetchAllRoles = () => {
       getAllRoles();
     }, [dispatch]);
   
-    return { loading, error };
+    return { roleLoading, roleError };
   };
   
 
