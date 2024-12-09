@@ -1,18 +1,33 @@
 {
-  "users": [
+  "users": [],
+  "roles": [
     {
-      "id": "2",
-      "name": "Jane Smith",
-      "email": "jane.smith@example.com",
-      "role": "Admin",
-      "status": true
+      "id": "1",
+      "roleName": "Admin",
+      "usersAssigned": 0,
+      "permissions": [
+        "Read",
+        "Delete",
+        "Update",
+        "Create"
+      ]
     },
     {
-      "id": "5f90",
-      "name": "Aman Singh",
-      "email": "amansingh79620@gmail.com",
-      "role": "Manager",
-      "status": false
+      "id": "2",
+      "roleName": "Manager",
+      "usersAssigned": 0,
+      "permissions": [
+        "Create",
+        "Read"
+      ]
+    },
+    {
+      "id": "3",
+      "roleName": "Client",
+      "usersAssigned": 0,
+      "permissions": [
+        "Read"
+      ]
     }
   ]
 }
