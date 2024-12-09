@@ -17,8 +17,8 @@ const UserRow = ({
         onChange={(e) => handleFieldChange(user.id, "role", e.target.value)}
       >
         <option value="Admin">Admin</option>
-        <option value="User">User</option>
         <option value="Manager">Manager</option>
+        <option value="Client">Client</option>
       </select>
     </td>
     <td className="p-4">
@@ -49,7 +49,7 @@ const UserRow = ({
       </button>
       <button
         className="text-red-600 hover:text-red-800"
-        onClick={() => handleDelete(user.id,user.role)} // Trigger delete function
+        onClick={() => handleDelete(user.id, user.role)} // Trigger delete function
       >
         Delete
       </button>

@@ -11,8 +11,8 @@ const UserCard = ({ user, editedRow, handleFieldChange, handleSaveEdit, handleDe
         onChange={(e) => handleFieldChange(user.id, "role", e.target.value)}
       >
         <option value="Admin">Admin</option>
-        <option value="User">User</option>
         <option value="Manager">Manager</option>
+        <option value="Client">Client</option>
       </select>
     </div>
     <div className="mt-2 flex items-center">
