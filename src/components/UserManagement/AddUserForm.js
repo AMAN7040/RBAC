@@ -174,7 +174,7 @@ const AddUserForm = ({ toggleAddUserForm }) => {
               >
                 <option value="Admin">Admin</option>
                 <option value="Manager">Manager</option>
-                <option value="User">User</option>
+                <option value="Client">Client</option>
               </select>
             </div>
 
