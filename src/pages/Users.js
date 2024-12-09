@@ -5,10 +5,12 @@ import UserTable from "../components/UserManagement/UserTable";
 import UserCard from "../components/UserManagement/UserCard";
 import useDeleteUser from "../hooks/UserMangement/useDeleteUser";
 import useFetchAllUsers from "../hooks/UserMangement/useFetchAllUsers";
+import useFetchAllRoles from "../hooks/RoleManagement/useFetchAlRoles";
 import useEditUser from "../hooks/UserMangement/useEditUser";
 
 const Users = () => {
   const { loading, error } = useFetchAllUsers();
+  const {roleLoading, roleError} = useFetchAllRoles();
   const users = useSelector((state) => state.users.userInfo);
   const { handleDelete } = useDeleteUser(users);
   const dispatch = useDispatch();
