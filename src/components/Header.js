@@ -34,9 +34,6 @@ const Header = () => {
           <NavLink to="/roles" className={linkClasses}>
             Roles
           </NavLink>
-          <NavLink to="/permissions" className={linkClasses}>
-            Permissions
-          </NavLink>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -79,13 +76,6 @@ const Header = () => {
             onClick={() => setMenuOpen(false)}
           >
             Roles
-          </NavLink>
-          <NavLink
-            to="/permissions"
-            className={linkClasses}
-            onClick={() => setMenuOpen(false)}
-          >
-            Permissions
           </NavLink>
         </nav>
       </div>
